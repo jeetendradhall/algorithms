@@ -16,6 +16,17 @@ ManyIntegers::ManyIntegers(char const * filename, unsigned int bits) : _filename
     //calculate range
     _range = 1 << bits;
 
+    //calculate the number of numbers to generate
+    //this should be lower than range, the maximum power of 10 with the leading digit same as the leading digit of range
+    //what power of 10 can the range accommodate?
+    int ten_exponent = floor(log10(_range));
+    //what is the value of that power of 10 number?
+    unsigned int ten_power = pow(10, ten_exponent);
+    //what is the leading digit of the range?
+    int leading_digit = floor(_range/ten_power);
+    //get closer to _range by having the same leading digit as range
+    _num_count = ten_power * leading_digit;
+
     //open the file
     //fstream file creation fails if its instance is re-created in the member initializer list
     _stream.open(_filename, ios::out);
@@ -48,10 +59,10 @@ void ManyIntegers::PrepareInput() {
     //PRNG: "Mersenne Twister" based on the Mersenne prime 2^19937−1)
     mt19937 prnGenerator (device());
     //create a uniform distribution for a given range
-    uniform_int_distribution<int> distribution (1, _range);
+    uniform_int_distribution<int> distribution (1, _range); //closed interval, boundary values 1 and _range included
 
-    //write _n integers to the file
-    for(int i = 0; i < _range; i++) {
+    //write _range integers to the file
+    for(int i = 0; i < _num_count; i++) {
         _stream << to_string(distribution(prnGenerator)) << '\n'; //endl; //writing endl forces a flush. replacing it with '\n' leaves the library to decide when to flush.
     }
 }

@@ -19,7 +19,8 @@ private:
                             //"char const *" to avoid the warning of passing a string literal "filename.txt" as char *. pass it as char const * instead
     fstream _stream; //a stream is an abstraction that represents a device on which operations of input and output are performed
     unsigned int _bits; //bit-sized integers
-    unsigned int _range; //size of date to be read or written
+    unsigned int _range; //range of values of integers generated
+    unsigned int _num_count; //number of integers generated
     //obtain a random number from hardware
     random_device device; //save the entropy got from the operating system's entropy pool, for this process
 public:
