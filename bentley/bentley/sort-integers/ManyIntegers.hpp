@@ -10,6 +10,7 @@
 #define ManyIntegers_hpp
 
 #include <fstream>
+#include <random> //random_device, std::mt19937, uniform_int_distribution
 using namespace std;
 
 class ManyIntegers {
@@ -17,10 +18,13 @@ private:
     char const * _filename; //file to operate on.
                             //"char const *" to avoid the warning of passing a string literal "filename.txt" as char *. pass it as char const * instead
     fstream _stream; //a stream is an abstraction that represents a device on which operations of input and output are performed
-    unsigned int _n; //size of date to be read or written
+    unsigned int _bits; //bit-sized integers
+    unsigned int _range; //size of date to be read or written
+    //obtain a random number from hardware
+    random_device device; //save the entropy got from the operating system's entropy pool, for this process
 public:
     //constructor, destructor
-    ManyIntegers(char const * filename, unsigned int n = UINT_MAX);
+    ManyIntegers(char const * filename, unsigned int bits = 8);
     ~ManyIntegers();
     
     //create a file containing _n integers

@@ -24,11 +24,20 @@ int main(int argc, const char * argv[]) {
     unsigned int n = 4294967295;
     cout << "Printing an unsigned int: " << n << endl;
     cout << "RoughWork End: Trying integer limits.";
+    n = 536870912;
+    unsigned int pattern = 2147483648;
+    for (int i = 0; i < 32; i++) {
+        cout << ((n & pattern)?1:0);
+        pattern = pattern >> 1;
+    }
+    int bits = 29;
+    unsigned int range = 1;
+    cout << endl << (range << bits) << endl;
     
     //[1]
     //Problem: Find a missing number in a large set of numbers (Bentley - Column 2)
 
-    ManyIntegers fourHundredMillionInts ("400-Million-Integers.txt", 400000); //create an instance of ManyIntegers
+    ManyIntegers fourHundredMillionInts ("400-Million-Integers.txt", 3); //create an instance of ManyIntegers
     fourHundredMillionInts.PrepareInput(); //prepare an input file with many integers
     
     return 0;
