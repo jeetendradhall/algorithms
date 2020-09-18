@@ -9,20 +9,27 @@
 #include <iostream>
 using namespace std;
 
-#include "FileHelper.hpp"
+#include "ManyIntegers.hpp"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    
+
+    //[0]
+    //Rough Work: trying integer limits
+
+    cout << "RoughWork Begin: Trying integer limits.";
     cout << "Maximum value of an int32_t: " << INT_MAX << endl;
     cout << "Maximum value produced by the rand() function: " << RAND_MAX << endl;
     cout << "Maximum value of an uint32_t: " << UINT_MAX << endl;
-    
+    cout << "Maximum value of unsigned long: " << std::numeric_limits<unsigned long>::max() << endl;
     unsigned int n = 4294967295;
     cout << "Printing an unsigned int: " << n << endl;
+    cout << "RoughWork End: Trying integer limits.";
     
-    FileHelper fourBillionInts ("four-billion-integers.txt", UINT_MAX);
-    fourBillionInts.WriteIntegers();
+    //[1]
+    //Problem: Find a missing number in a large set of numbers (Bentley - Column 2)
+
+    ManyIntegers fourHundredMillionInts ("400-Million-Integers.txt", 400000); //create an instance of ManyIntegers
+    fourHundredMillionInts.PrepareInput(); //prepare an input file with many integers
     
     return 0;
 }

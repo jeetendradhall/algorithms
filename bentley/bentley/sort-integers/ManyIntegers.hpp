@@ -1,18 +1,18 @@
 //
-//  FileHelper.hpp
+//  ManyIntegers.hpp
 //  bentley
 //
 //  Created by Sheetal on 16/09/20.
 //  Copyright © 2020 jdhall. All rights reserved.
 //
 
-#ifndef FileHelper_hpp
-#define FileHelper_hpp
+#ifndef ManyIntegers_hpp
+#define ManyIntegers_hpp
 
 #include <fstream>
 using namespace std;
 
-class FileHelper {
+class ManyIntegers {
 private:
     char const * _filename; //file to operate on.
                             //"char const *" to avoid the warning of passing a string literal "filename.txt" as char *. pass it as char const * instead
@@ -20,11 +20,11 @@ private:
     unsigned int _n; //size of date to be read or written
 public:
     //constructor, destructor
-    FileHelper(char const * filename, unsigned int n = UINT_MAX);
-    ~FileHelper();
+    ManyIntegers(char const * filename, unsigned int n = UINT_MAX);
+    ~ManyIntegers();
     
     //create a file containing _n integers
-    void WriteIntegers();
+    void PrepareInput();
 };
 
-#endif /* FileHelper_hpp */
+#endif /* ManyIntegers_hpp */

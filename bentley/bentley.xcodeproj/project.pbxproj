@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		13ED254825125EC100CF6E69 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13ED254725125EC100CF6E69 /* main.cpp */; };
-		13ED2555251267BB00CF6E69 /* FileHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13ED2553251267BA00CF6E69 /* FileHelper.cpp */; };
+		13ED2555251267BB00CF6E69 /* ManyIntegers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13ED2553251267BA00CF6E69 /* ManyIntegers.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,8 +26,8 @@
 /* Begin PBXFileReference section */
 		13ED254425125EC100CF6E69 /* bentley */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = bentley; sourceTree = BUILT_PRODUCTS_DIR; };
 		13ED254725125EC100CF6E69 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		13ED2553251267BA00CF6E69 /* FileHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileHelper.cpp; sourceTree = "<group>"; };
-		13ED2554251267BA00CF6E69 /* FileHelper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FileHelper.hpp; sourceTree = "<group>"; };
+		13ED2553251267BA00CF6E69 /* ManyIntegers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ManyIntegers.cpp; sourceTree = "<group>"; };
+		13ED2554251267BA00CF6E69 /* ManyIntegers.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ManyIntegers.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,8 +69,8 @@
 		13ED2552251267BA00CF6E69 /* sort-integers */ = {
 			isa = PBXGroup;
 			children = (
-				13ED2553251267BA00CF6E69 /* FileHelper.cpp */,
-				13ED2554251267BA00CF6E69 /* FileHelper.hpp */,
+				13ED2553251267BA00CF6E69 /* ManyIntegers.cpp */,
+				13ED2554251267BA00CF6E69 /* ManyIntegers.hpp */,
 			);
 			path = "sort-integers";
 			sourceTree = "<group>";
@@ -133,7 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13ED254825125EC100CF6E69 /* main.cpp in Sources */,
-				13ED2555251267BB00CF6E69 /* FileHelper.cpp in Sources */,
+				13ED2555251267BB00CF6E69 /* ManyIntegers.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
