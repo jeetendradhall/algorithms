@@ -39,8 +39,8 @@ int main(int argc, const char * argv[]) {
     //[1]
     //Problem: Find a missing number in a large set of numbers (Bentley - Column 2)
 
-    ManyIntegers fourHundredMillionInts ("400-Million-Integers.txt", 5); //create an instance of ManyIntegers
+    ManyIntegers fourHundredMillionInts ("400-Million-Integers.txt", 4); //create an instance of ManyIntegers
     fourHundredMillionInts.PrepareInput(); //prepare an input file with many integers
-    
+
     return 0;
 }

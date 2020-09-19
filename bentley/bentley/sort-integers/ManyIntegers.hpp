@@ -15,10 +15,10 @@ using namespace std;
 
 class ManyIntegers {
 private:
+    const int INTEGER_BIT_SIZE = 32;
     char const * _filename; //file to operate on.
                             //"char const *" to avoid the warning of passing a string literal "filename.txt" as char *. pass it as char const * instead
-    fstream _stream; //a stream is an abstraction that represents a device on which operations of input and output are performed
-    unsigned int _bits; //bit-sized integers
+    unsigned int _bits; //bit-range of integers
     unsigned int _range; //range of values of integers generated
     unsigned int _num_count; //number of integers generated
     //obtain a random number from hardware
@@ -26,10 +26,15 @@ private:
 public:
     //constructor, destructor
     ManyIntegers(char const * filename, unsigned int bits = 8);
-    ~ManyIntegers();
-    
+
     //create a file containing _n integers
     void PrepareInput();
+
+    //find the missing number
+    unsigned int FindMissingNumber();
+    
+private:
+    void CalculateRangeAndQuantity ();
 };
 
 #endif /* ManyIntegers_hpp */
