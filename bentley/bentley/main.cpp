@@ -35,12 +35,13 @@ int main(int argc, const char * argv[]) {
     unsigned int range = 1;
     cout << endl << (range << bits) << endl;
     cout << "RoughWork End: Trying bit manipulation." << endl;
-
+    
     //[1]
     //Problem: Find a missing number in a large set of numbers (Bentley - Column 2)
 
-    ManyIntegers fourHundredMillionInts ("400-Million-Integers.txt", 4); //create an instance of ManyIntegers
-    fourHundredMillionInts.PrepareInput(); //prepare an input file with many integers
+    ManyIntegers fiveHundredMillionInts ("500-Million-Integers.txt", bits); //create an instance of ManyIntegers
+    fiveHundredMillionInts.PrepareInput(); //prepare an input file with many integers
+    cout << "The missing number is: " << fiveHundredMillionInts.FindMissingNumber() << endl;
 
     return 0;
 }
