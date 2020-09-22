@@ -31,7 +31,7 @@ int main(int argc, const char * argv[]) {
         cout << ((n & pattern)?1:0);
         pattern = pattern >> 1;
     }
-    int bits = 29;
+    int bits = 4;
     unsigned int range = 1;
     cout << endl << (range << bits) << endl;
     cout << "RoughWork End: Trying bit manipulation." << endl;

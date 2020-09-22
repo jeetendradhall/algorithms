@@ -17,7 +17,6 @@ enum class Child {None, Left, Right};
 
 class ManyIntegers {
 private:
-    const int INTEGER_BIT_SIZE = 32;
     string _filename; //file to operate on.
                             //"char const *" to avoid the warning of passing a string literal "filename.txt" as char *. pass it as char const * instead
     unsigned int _bits; //bit-range of integers
@@ -31,10 +30,11 @@ public:
     ManyIntegers(string filename, unsigned int bits = 8);
 
     //create a file containing _num_count integers
+    //BUG: the integers generated contain duplicates
     void PrepareInput();
 
     //find the missing number in the range 1.._range
-    unsigned int FindMissingNumber ();
+    unsigned int FindMissingNumber();
 
 private:
     //calculate numeric range and number of integers to be generated
